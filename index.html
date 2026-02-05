@@ -34,7 +34,7 @@
 </section>
 
 <!-- ABOUT -->
-<section class="section" id="about">
+<section class="section reveal" id="about">
   <h2>About Al Ajaara Energy</h2>
   <p>
     Al Ajaara Energy Trading FZE is a UAE-based physical bunker supplier,
@@ -48,7 +48,7 @@
 </section>
 
 <!-- PRODUCTS -->
-<section class="section dark" id="products">
+<section class="section dark reveal" id="products">
   <h2>Our Products</h2>
 
   <div class="cards">
@@ -73,7 +73,7 @@
 </section>
 
 <!-- SUPPLY AREAS -->
-<section class="section" id="areas">
+<section class="section reveal" id="areas">
   <h2>Supply Areas</h2>
   <p>We provide bunker supply at Ports, Anchorages & OPL, subject to feasibility.</p>
 
@@ -93,7 +93,7 @@
 </section>
 
 <!-- CONTACT -->
-<section class="section dark" id="contact">
+<section class="section dark reveal" id="contact">
   <h2>Contact Us</h2>
   <p><strong>Email:</strong> info@alajaaraenergy.com</p>
   <p><strong>WhatsApp:</strong> +971 55 375 3171</p>
@@ -110,7 +110,22 @@
   © 2026 Al Ajaara Energy Trading FZE. All Rights Reserved.
 </footer>
 
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+
+  window.addEventListener("scroll", () => {
+    reveals.forEach(section => {
+      const top = section.getBoundingClientRect().top;
+      const screen = window.innerHeight - 100;
+      if (top < screen) {
+        section.classList.add("active");
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
+
 
 
