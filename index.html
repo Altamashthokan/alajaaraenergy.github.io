@@ -135,6 +135,28 @@
   </iframe>
 </div>
 
+<section class="section dark reveal">
+  <h2>Send Inquiry</h2>
+
+  <form onsubmit="sendWhatsApp(); return false;" style="max-width:500px; margin:auto;">
+    <input type="text" id="name" placeholder="Your Name" required style="width:100%; padding:12px; margin:10px 0;">
+    <input type="text" id="vessel" placeholder="Vessel Name" style="width:100%; padding:12px; margin:10px 0;">
+    <input type="text" id="port" placeholder="Port / Area" style="width:100%; padding:12px; margin:10px 0;">
+    <button class="btn" type="submit">Send via WhatsApp</button>
+  </form>
+</section>
+
+<script>
+function sendWhatsApp() {
+  const name = document.getElementById("name").value;
+  const vessel = document.getElementById("vessel").value;
+  const port = document.getElementById("port").value;
+
+  const msg = `Inquiry from ${name}%0AVessel: ${vessel}%0APort/Area: ${port}`;
+  window.open(`https://wa.me/971553753171?text=${msg}`, "_blank");
+}
+</script>
+ 
 <!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/971553753171" target="_blank">
   WhatsApp Us
@@ -169,6 +191,7 @@
 
 </body>
 </html>
+
 
 
 
