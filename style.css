@@ -196,6 +196,18 @@ footer {
   transform: translateY(0);
 }
 
+/* SHRINK HEADER ON SCROLL */
+.header.shrink {
+  padding: 8px 40px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.header.shrink .logo img {
+  height: 35px;
+}
+
+
+
 
 
 
